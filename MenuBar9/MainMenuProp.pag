@@ -1,0 +1,1428 @@
+VERSION 5.00
+Begin VB.PropertyPage MainMenuProp 
+   BackColor       =   &H00C0FFFF&
+   Caption         =   "MainMenuProp"
+   ClientHeight    =   7680
+   ClientLeft      =   0
+   ClientTop       =   0
+   ClientWidth     =   5505
+   PaletteMode     =   0  'Halftone
+   ScaleHeight     =   7680
+   ScaleWidth      =   5505
+   Begin VB.Frame Frame5 
+      Caption         =   "Selected Menu Item"
+      Height          =   3435
+      Left            =   60
+      TabIndex        =   23
+      Top             =   4170
+      Width           =   5385
+      Begin VB.CheckBox Check7 
+         Caption         =   "Show Icon"
+         Height          =   345
+         Left            =   4350
+         TabIndex        =   61
+         Top             =   1020
+         Width           =   765
+      End
+      Begin VB.CommandButton Command2 
+         Caption         =   "..."
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   12
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   255
+         Index           =   3
+         Left            =   3750
+         TabIndex        =   56
+         Top             =   2010
+         Width           =   375
+      End
+      Begin VB.TextBox txtGradiant 
+         Height          =   255
+         Left            =   2490
+         TabIndex        =   54
+         Top             =   2010
+         Width           =   1305
+      End
+      Begin VB.VScrollBar VS 
+         Height          =   255
+         Left            =   2820
+         TabIndex        =   53
+         Top             =   270
+         Width           =   165
+      End
+      Begin VB.TextBox Text5 
+         Height          =   255
+         Left            =   810
+         TabIndex        =   50
+         Text            =   "0"
+         Top             =   1860
+         Width           =   315
+      End
+      Begin VB.TextBox Text1 
+         Height          =   285
+         Left            =   810
+         TabIndex        =   0
+         Top             =   270
+         Width           =   1995
+      End
+      Begin VB.CheckBox Check1 
+         Caption         =   "Checked"
+         Height          =   225
+         Left            =   270
+         TabIndex        =   40
+         TabStop         =   0   'False
+         Top             =   1560
+         Width           =   1035
+      End
+      Begin VB.CheckBox Check2 
+         Caption         =   "Enabled"
+         Height          =   225
+         Left            =   1290
+         TabIndex        =   39
+         TabStop         =   0   'False
+         Top             =   990
+         Value           =   1  'Checked
+         Width           =   1005
+      End
+      Begin VB.CheckBox Check3 
+         Caption         =   "Visible"
+         Height          =   255
+         Left            =   270
+         TabIndex        =   38
+         TabStop         =   0   'False
+         Top             =   960
+         Value           =   1  'Checked
+         Width           =   885
+      End
+      Begin VB.CheckBox Check4 
+         Caption         =   "Border"
+         Height          =   225
+         Left            =   270
+         TabIndex        =   37
+         TabStop         =   0   'False
+         Top             =   2370
+         Width           =   795
+      End
+      Begin VB.ComboBox Combo1 
+         Height          =   315
+         Left            =   3780
+         TabIndex        =   36
+         TabStop         =   0   'False
+         Text            =   "(NONE)"
+         Top             =   600
+         Width           =   1575
+      End
+      Begin VB.CheckBox Check5 
+         Caption         =   "Popup"
+         Height          =   255
+         Left            =   270
+         TabIndex        =   35
+         TabStop         =   0   'False
+         Top             =   1260
+         Width           =   825
+      End
+      Begin VB.CheckBox Check6 
+         Caption         =   "Drop"
+         Height          =   255
+         Left            =   1290
+         TabIndex        =   34
+         TabStop         =   0   'False
+         Top             =   1290
+         Width           =   765
+      End
+      Begin VB.TextBox Text2 
+         Height          =   285
+         Left            =   840
+         TabIndex        =   1
+         Top             =   600
+         Width           =   2865
+      End
+      Begin VB.CommandButton Command2 
+         Caption         =   "..."
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   12
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   255
+         Index           =   1
+         Left            =   3750
+         TabIndex        =   33
+         TabStop         =   0   'False
+         Top             =   1140
+         Width           =   375
+      End
+      Begin VB.CommandButton Command2 
+         Caption         =   "..."
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   12
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   255
+         Index           =   0
+         Left            =   3750
+         TabIndex        =   32
+         Top             =   1560
+         Width           =   375
+      End
+      Begin VB.TextBox txtForeColor 
+         Height          =   255
+         Left            =   2490
+         TabIndex        =   31
+         Top             =   1140
+         Width           =   1275
+      End
+      Begin VB.TextBox txtBackcolor 
+         Height          =   255
+         Left            =   2490
+         TabIndex        =   30
+         Top             =   1560
+         Width           =   1275
+      End
+      Begin VB.Frame Frame2 
+         Caption         =   "&Icon:"
+         Height          =   1260
+         Index           =   0
+         Left            =   4350
+         TabIndex        =   26
+         Tag             =   "E"
+         Top             =   1410
+         Visible         =   0   'False
+         Width           =   840
+         Begin VB.CommandButton btnClear 
+            Height          =   375
+            Index           =   0
+            Left            =   420
+            Picture         =   "MainMenuProp.pgx":0000
+            Style           =   1  'Graphical
+            TabIndex        =   29
+            TabStop         =   0   'False
+            Tag             =   "E"
+            ToolTipText     =   "Clear Picture"
+            Top             =   750
+            Width           =   375
+         End
+         Begin VB.CommandButton btnBrowse 
+            Height          =   375
+            Index           =   0
+            Left            =   60
+            Picture         =   "MainMenuProp.pgx":014A
+            Style           =   1  'Graphical
+            TabIndex        =   28
+            Tag             =   "E"
+            ToolTipText     =   "Browse Picture"
+            Top             =   750
+            Width           =   375
+         End
+         Begin VB.PictureBox picImg 
+            AutoRedraw      =   -1  'True
+            AutoSize        =   -1  'True
+            BackColor       =   &H80000004&
+            BorderStyle     =   0  'None
+            Enabled         =   0   'False
+            Height          =   270
+            Left            =   270
+            ScaleHeight     =   18
+            ScaleMode       =   3  'Pixel
+            ScaleWidth      =   18
+            TabIndex        =   27
+            TabStop         =   0   'False
+            Top             =   300
+            Width           =   270
+         End
+      End
+      Begin VB.TextBox Text3 
+         Height          =   285
+         Left            =   3510
+         TabIndex        =   2
+         TabStop         =   0   'False
+         Top             =   270
+         Width           =   1815
+      End
+      Begin VB.TextBox Text4 
+         Height          =   255
+         Left            =   2490
+         TabIndex        =   25
+         Text            =   "Font Test"
+         Top             =   2460
+         Width           =   1275
+      End
+      Begin VB.CommandButton Command2 
+         Caption         =   "..."
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   12
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   255
+         Index           =   2
+         Left            =   3750
+         TabIndex        =   24
+         TabStop         =   0   'False
+         Top             =   2460
+         Width           =   375
+      End
+      Begin VB.Frame Frame3 
+         Caption         =   "Style"
+         Height          =   855
+         Left            =   1170
+         TabIndex        =   47
+         Top             =   1560
+         Width           =   1065
+         Begin VB.OptionButton Option2 
+            Caption         =   "None"
+            Height          =   195
+            Index           =   0
+            Left            =   120
+            TabIndex        =   52
+            Top             =   210
+            Value           =   -1  'True
+            Width           =   765
+         End
+         Begin VB.OptionButton Option2 
+            Caption         =   "Check"
+            Height          =   195
+            Index           =   1
+            Left            =   120
+            TabIndex        =   49
+            Top             =   420
+            Width           =   765
+         End
+         Begin VB.OptionButton Option2 
+            Caption         =   "Option"
+            Height          =   195
+            Index           =   2
+            Left            =   120
+            TabIndex        =   48
+            Top             =   630
+            Width           =   765
+         End
+      End
+      Begin VB.Frame Frame6 
+         Caption         =   "Current Properties Applied"
+         Height          =   675
+         Left            =   90
+         TabIndex        =   64
+         Top             =   2700
+         Width           =   5205
+         Begin VB.PictureBox Picture1 
+            Appearance      =   0  'Flat
+            BackColor       =   &H80000005&
+            ForeColor       =   &H80000008&
+            Height          =   375
+            Left            =   60
+            ScaleHeight     =   345
+            ScaleWidth      =   5055
+            TabIndex        =   65
+            Top             =   210
+            Width           =   5085
+            Begin MenuBar.Seperator Seperator1 
+               Height          =   90
+               Left            =   30
+               TabIndex        =   66
+               Top             =   150
+               Visible         =   0   'False
+               Width           =   4815
+               _ExtentX        =   8493
+               _ExtentY        =   159
+            End
+            Begin MenuBar.MenuItem MenuItem1 
+               Height          =   300
+               Left            =   30
+               TabIndex        =   67
+               Top             =   30
+               Width           =   4275
+               _ExtentX        =   7541
+               _ExtentY        =   529
+            End
+         End
+      End
+      Begin VB.Label label 
+         Caption         =   "Gradiant"
+         Height          =   225
+         Index           =   1
+         Left            =   2490
+         TabIndex        =   55
+         Top             =   1800
+         Width           =   1155
+      End
+      Begin VB.Label Label6 
+         Caption         =   "Group"
+         Height          =   255
+         Left            =   270
+         TabIndex        =   51
+         Top             =   1890
+         Width           =   465
+      End
+      Begin VB.Label Label2 
+         Caption         =   "Caption:"
+         Height          =   285
+         Index           =   0
+         Left            =   150
+         TabIndex        =   46
+         Top             =   270
+         Width           =   615
+      End
+      Begin VB.Label Label3 
+         Caption         =   "Tool Tip"
+         Height          =   225
+         Left            =   120
+         TabIndex        =   45
+         Top             =   630
+         Width           =   675
+      End
+      Begin VB.Label Label2 
+         Caption         =   "ForeColor"
+         Height          =   255
+         Index           =   1
+         Left            =   2490
+         TabIndex        =   44
+         Top             =   960
+         Width           =   825
+      End
+      Begin VB.Label Label4 
+         Caption         =   "Tag"
+         Height          =   255
+         Left            =   3150
+         TabIndex        =   43
+         Top             =   300
+         Width           =   465
+      End
+      Begin VB.Label label 
+         Caption         =   "Backcolor"
+         Height          =   225
+         Index           =   0
+         Left            =   2490
+         TabIndex        =   42
+         Top             =   1380
+         Width           =   1155
+      End
+      Begin VB.Label Label5 
+         Caption         =   "Font"
+         Height          =   195
+         Left            =   2490
+         TabIndex        =   41
+         Top             =   2280
+         Width           =   525
+      End
+   End
+   Begin VB.Frame Frame4 
+      Caption         =   "Menu Item List"
+      Height          =   1575
+      Left            =   60
+      TabIndex        =   14
+      Top             =   2520
+      Width           =   5385
+      Begin VB.CommandButton Command3 
+         Caption         =   "Next"
+         Height          =   345
+         Left            =   4620
+         TabIndex        =   22
+         ToolTipText     =   "Move to next item or add new item"
+         Top             =   270
+         Width           =   645
+      End
+      Begin VB.CommandButton Command4 
+         Caption         =   "Insert"
+         Height          =   345
+         Left            =   4620
+         TabIndex        =   21
+         ToolTipText     =   "Insert Item above current position"
+         Top             =   720
+         Width           =   645
+      End
+      Begin VB.CommandButton Command5 
+         Caption         =   "Delete"
+         Height          =   345
+         Left            =   4620
+         TabIndex        =   20
+         ToolTipText     =   "remove item"
+         Top             =   1140
+         Width           =   645
+      End
+      Begin VB.ListBox List1 
+         Height          =   1230
+         ItemData        =   "MainMenuProp.pgx":0294
+         Left            =   420
+         List            =   "MainMenuProp.pgx":0296
+         TabIndex        =   19
+         TabStop         =   0   'False
+         Top             =   270
+         Width           =   4155
+      End
+      Begin VB.PictureBox Label1 
+         Appearance      =   0  'Flat
+         BackColor       =   &H80000000&
+         BorderStyle     =   0  'None
+         ForeColor       =   &H80000008&
+         Height          =   255
+         Index           =   0
+         Left            =   90
+         Picture         =   "MainMenuProp.pgx":0298
+         ScaleHeight     =   255
+         ScaleWidth      =   255
+         TabIndex        =   18
+         TabStop         =   0   'False
+         ToolTipText     =   "Move out one child level"
+         Top             =   270
+         Width           =   255
+      End
+      Begin VB.PictureBox Label1 
+         Appearance      =   0  'Flat
+         BackColor       =   &H80000000&
+         BorderStyle     =   0  'None
+         ForeColor       =   &H80000008&
+         Height          =   255
+         Index           =   1
+         Left            =   90
+         Picture         =   "MainMenuProp.pgx":0462
+         ScaleHeight     =   255
+         ScaleWidth      =   255
+         TabIndex        =   17
+         TabStop         =   0   'False
+         ToolTipText     =   "Move in one child lvel"
+         Top             =   570
+         Width           =   255
+      End
+      Begin VB.PictureBox Label1 
+         Appearance      =   0  'Flat
+         BackColor       =   &H80000000&
+         BorderStyle     =   0  'None
+         ForeColor       =   &H80000008&
+         Height          =   255
+         Index           =   2
+         Left            =   90
+         Picture         =   "MainMenuProp.pgx":062C
+         ScaleHeight     =   255
+         ScaleWidth      =   255
+         TabIndex        =   16
+         TabStop         =   0   'False
+         ToolTipText     =   "Move Item Up"
+         Top             =   870
+         Width           =   255
+      End
+      Begin VB.PictureBox Label1 
+         Appearance      =   0  'Flat
+         BackColor       =   &H80000000&
+         BorderStyle     =   0  'None
+         ForeColor       =   &H80000008&
+         Height          =   255
+         Index           =   3
+         Left            =   90
+         Picture         =   "MainMenuProp.pgx":07F6
+         ScaleHeight     =   255
+         ScaleWidth      =   255
+         TabIndex        =   15
+         TabStop         =   0   'False
+         ToolTipText     =   "Move Item Down"
+         Top             =   1170
+         Width           =   255
+      End
+   End
+   Begin VB.Frame fram 
+      Caption         =   "Menu Bar Properties"
+      Height          =   2385
+      Left            =   60
+      TabIndex        =   3
+      Top             =   60
+      Width           =   5385
+      Begin VB.CheckBox Check9 
+         Caption         =   "To have the Gradient go from center out check this option."
+         Height          =   285
+         Left            =   150
+         TabIndex        =   63
+         Top             =   2040
+         Width           =   5055
+      End
+      Begin VB.CheckBox Check8 
+         Caption         =   $"MainMenuProp.pgx":09C0
+         Height          =   675
+         Left            =   150
+         TabIndex        =   62
+         Top             =   1440
+         Width           =   4905
+      End
+      Begin VB.CheckBox sync 
+         Caption         =   "Synchronize Properties of all items based on the first item in the list"
+         Height          =   225
+         Left            =   150
+         TabIndex        =   60
+         Top             =   1170
+         Width           =   4965
+      End
+      Begin VB.CommandButton Command2 
+         Caption         =   "..."
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   12
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   255
+         Index           =   4
+         Left            =   1470
+         TabIndex        =   58
+         Top             =   720
+         Width           =   375
+      End
+      Begin VB.TextBox Text6 
+         Height          =   255
+         Left            =   90
+         TabIndex        =   57
+         Top             =   720
+         Width           =   1395
+      End
+      Begin VB.CheckBox chkEnabled 
+         Caption         =   "Enabled"
+         Height          =   285
+         Left            =   60
+         TabIndex        =   10
+         TabStop         =   0   'False
+         Top             =   210
+         Value           =   1  'Checked
+         Width           =   930
+      End
+      Begin VB.Frame Frame1 
+         Caption         =   "Border options"
+         Height          =   885
+         Left            =   2280
+         TabIndex        =   5
+         Top             =   210
+         Width           =   3015
+         Begin VB.OptionButton Option1 
+            Caption         =   "Framed"
+            Height          =   195
+            Index           =   0
+            Left            =   90
+            TabIndex        =   13
+            Top             =   630
+            Value           =   -1  'True
+            Width           =   915
+         End
+         Begin VB.OptionButton Option1 
+            Caption         =   "Raised"
+            Height          =   195
+            Index           =   1
+            Left            =   1050
+            TabIndex        =   12
+            Top             =   630
+            Width           =   825
+         End
+         Begin VB.OptionButton Option1 
+            Caption         =   "Sunken"
+            Height          =   195
+            Index           =   2
+            Left            =   2010
+            TabIndex        =   11
+            Top             =   630
+            Width           =   915
+         End
+         Begin VB.CheckBox chkBotBorder 
+            Caption         =   "Bottom"
+            Height          =   285
+            Left            =   2070
+            TabIndex        =   9
+            TabStop         =   0   'False
+            Top             =   240
+            Width           =   810
+         End
+         Begin VB.CheckBox chkRightBorder 
+            Caption         =   "Right"
+            Height          =   285
+            Left            =   1350
+            TabIndex        =   8
+            TabStop         =   0   'False
+            Top             =   240
+            Width           =   1170
+         End
+         Begin VB.CheckBox chkLeftBorder 
+            Caption         =   "Left"
+            Height          =   285
+            Left            =   90
+            TabIndex        =   7
+            TabStop         =   0   'False
+            Top             =   240
+            Width           =   630
+         End
+         Begin VB.CheckBox chkTopBorder 
+            Caption         =   "Top"
+            Height          =   285
+            Left            =   720
+            TabIndex        =   6
+            TabStop         =   0   'False
+            Top             =   240
+            Width           =   585
+         End
+      End
+      Begin VB.CheckBox chkBorder 
+         Caption         =   "Border"
+         Height          =   285
+         Left            =   1380
+         TabIndex        =   4
+         TabStop         =   0   'False
+         Top             =   240
+         Value           =   1  'Checked
+         Width           =   840
+      End
+      Begin VB.Label Label7 
+         Caption         =   "MenuBar Backcolor"
+         Height          =   195
+         Left            =   90
+         TabIndex        =   59
+         Top             =   510
+         Width           =   1485
+      End
+   End
+End
+Attribute VB_Name = "MainMenuProp"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = True
+Attribute VB_PredeclaredId = False
+Attribute VB_Exposed = True
+Option Explicit
+Private LstIndex As Integer
+Dim MB As MainMenu
+Dim prefix As String
+Dim mnuItem As mnus
+Private BodOpt As Integer
+Private cutPart As String
+Private CD As Cdlg
+
+Private Sub btnBrowse_Click(Index As Integer) 'choose an icon for your item
+Dim TmpPic2 As picture
+Dim MI As mnus
+On Error Resume Next
+CD.hOwner = PropertyPage.hWnd
+    CD.Filter = "*.bmp|*.ico|*.gif"
+    CD.ShowOpen
+    picImg.picture = LoadPicture(CD.FileName)
+        If picImg.ScaleHeight > 16 Or picImg.ScaleWidth > 16 Then
+            Set TmpPic2 = LoadPicture(CD.FileName)
+            picImg.picture = LoadPicture()
+            picImg.Cls
+            TmpPic2.Render picImg.hdc, 0, 0, 16, 16, 0, TmpPic2.Height, TmpPic2.Width, -TmpPic2.Height, ByVal 0&
+            Set TmpPic2 = Nothing
+            picImg.picture = picImg.Image
+        End If
+    Set MenuItem1.picture = picImg.picture
+    picImg.picture = MenuItem1.picture
+End Sub
+
+Private Sub btnClear_Click(Index As Integer)
+    picImg.picture = Nothing
+End Sub
+
+Private Sub Check1_Click()
+    Changed = True
+    MenuItem1.Checked = Check1.Value
+End Sub
+
+Private Sub Check2_Click()
+    Changed = True
+    MenuItem1.Enabled = Check2.Value
+End Sub
+
+Private Sub Check3_Click()
+    Changed = True
+End Sub
+
+Private Sub Check4_Click()
+    Changed = True
+    MenuItem1.Border = Check4.Value
+End Sub
+
+Private Sub Check5_Click()
+    Changed = True
+End Sub
+
+Private Sub Check6_Click()
+    Changed = True
+    MenuItem1.Dropdown = Check6.Value
+End Sub
+
+Private Sub Check7_Click()
+    If Check7.Value = 1 Then
+        Frame2(0).Visible = True
+        MenuItem1.BStyle = True
+    Else
+        Frame2(0).Visible = False
+        MenuItem1.BStyle = False
+    End If
+        Changed = True
+End Sub
+
+Private Sub Check8_Click()
+    Changed = True
+    If Check8.Value = 1 Then
+        If Check9.Value = 1 Then
+            GRADIENT_FILL_RECT_DIRECTION = 1
+        Else
+            GRADIENT_FILL_RECT_DIRECTION = 0
+        End If
+    Else
+        If Check9.Value = 1 Then
+            GRADIENT_FILL_RECT_DIRECTION = 3
+        Else
+            GRADIENT_FILL_RECT_DIRECTION = 2
+        End If
+    End If
+    MenuItem1.Caption = MenuItem1.Caption
+End Sub
+
+Private Sub Check9_Click()
+Changed = True
+    If Check8.Value = 1 Then
+        If Check9.Value = 1 Then
+            GRADIENT_FILL_RECT_DIRECTION = 1
+        Else
+            GRADIENT_FILL_RECT_DIRECTION = 0
+        End If
+    Else
+        If Check9.Value = 1 Then
+            GRADIENT_FILL_RECT_DIRECTION = 3
+        Else
+            GRADIENT_FILL_RECT_DIRECTION = 2
+        End If
+    End If
+MenuItem1.Caption = MenuItem1.Caption
+End Sub
+
+Private Sub chkBotBorder_Click()
+    Changed = True
+End Sub
+
+Private Sub chkRightBorder_Click()
+    Changed = True
+End Sub
+
+Private Sub chkLeftBorder_Click()
+    Changed = True
+End Sub
+
+Private Sub chkTopBorder_Click()
+    Changed = True
+End Sub
+
+Private Sub chkBorder_Click()
+    Changed = True
+End Sub
+
+Private Sub chkEnabled_Click()
+    Changed = True
+End Sub
+Private Sub LoadProper(Index As Integer) 'load an items info from the array
+If Index = -1 Then Exit Sub
+Dim nuItem As mnus
+    mnuItem = MB.GetItemInfo(Index)
+    With mnuItem
+            If InStr(1, .Caption, "....") > 0 Then 'If there are any "." in the caption Remove them and save in prefix
+                prefix = Left(.Caption, Len(.Caption) - Len(Replace(.Caption, "....", "")))
+                Text1.Text = Replace(.Caption, "....", "") 'apply the remaining caption to the text box
+            Else
+                If .Caption = "" Then
+                    Text1.Text = .Caption 'if the caption is nothing then maintain the prefix
+                Else
+                    prefix = "" 'otherwise the prefix will be set based on the new item
+                    Text1.Text = .Caption
+                End If
+            End If
+        Text2.Text = .Tool
+        Text3.Text = .Tag
+        Text5.Text = .Group
+        txtGradiant.BackColor = .Gradiant
+        txtGradiant.Text = .Gradiant
+            If .Style = -1 Then
+                Option2(0).Value = True
+            ElseIf .Style = 0 Then
+                If List1.ListCount = 1 And List1.List(0) = "" Then 'when no items are in the menu
+                    Option2(0).Value = True
+                Else
+                    Option2(1).Value = True
+                End If
+            ElseIf .Style = 1 Then
+                Option2(2).Value = True
+            End If
+        Check7.Value = .BStyle ' = 1 Then
+            If .bkcol = 0 Then
+                txtBackcolor.Text = &H8000000F 'Default Color
+                txtBackcolor.BackColor = &H8000000F
+                txtForeColor.BackColor = &H8000000F
+            Else
+                txtBackcolor.BackColor = .bkcol
+                txtBackcolor.Text = .bkcol
+                txtForeColor.BackColor = .bkcol
+            End If
+        txtForeColor.Text = .frCol
+        txtBackcolor.ForeColor = .frCol
+        txtForeColor.ForeColor = .frCol
+        txtGradiant.ForeColor = .frCol
+        If Not .Font Is Nothing Then
+            Text4.Font = .Font
+            Text4.FontBold = .Font.Bold
+            Text4.Text = .Font.Name
+        End If
+        If .sCut <> vbNullString Then
+            Combo1.Text = .sCut
+        Else
+            Combo1.Text = "(NONE)"
+        End If
+            Set picImg.picture = .Icon
+            If .Check = True Then
+                Check1.Value = 1
+            Else
+                Check1.Value = 0
+            End If
+
+            If .Enabled = True Then
+                Check2.Value = 1
+            Else
+                Check2.Value = 0
+            End If
+
+            If .Visible = True Then
+                Check3.Value = 1
+            Else
+                Check3.Value = 0
+            End If
+
+            If .Border = True Then
+                Check4.Value = 1
+            Else
+                Check4.Value = 0
+            End If
+
+            If .ispop = True Then
+                Check5.Value = 1
+            Else
+                Check5.Value = 0
+            End If
+
+            If .Drop = True Then
+                Check6.Value = 1
+            Else
+                Check6.Value = 0
+            End If
+    End With
+'set the properties of the display item to match what will be seen at run time-------------------------------------------
+    With MenuItem1
+            If sync.Value = 1 Then 'if we are forcing all items to look the same
+                nuItem = MB.GetItemInfo(0) 'get the properties of the first item
+                .ForeColor = nuItem.frCol
+                .Gradiant = nuItem.Gradiant
+                .BackColor = nuItem.bkcol
+            Else
+                .ForeColor = mnuItem.frCol
+                .Gradiant = mnuItem.Gradiant
+                .BackColor = mnuItem.bkcol
+            End If
+        .Border = mnuItem.Border
+        .BStyle = mnuItem.BStyle
+        .Checked = mnuItem.Check
+        .Dropdown = mnuItem.Drop
+        If Not mnuItem.Font Is Nothing Then Set .Font = mnuItem.Font
+        Set .picture = mnuItem.Icon
+        .Enabled = mnuItem.Enabled
+        .Caption = mnuItem.Caption
+    End With
+    With Seperator1
+        If sync.Value = 1 Then 'if we are forcing all items to look the same
+            nuItem = MB.GetItemInfo(0) 'get the properties of the first item
+            .ForeColor = nuItem.frCol
+            .Gradiant = nuItem.Gradiant
+            .BackColor = nuItem.bkcol
+        Else
+            .ForeColor = mnuItem.frCol
+            .Gradiant = mnuItem.Gradiant
+            .BackColor = mnuItem.bkcol
+        End If
+        .Caption = mnuItem.Tool
+    End With
+End Sub
+
+Private Sub SaveProper(Index As Integer) 'save items info to the array
+Dim dat As String
+Dim dep As Long
+Dim dat2 As String
+Dim datapath As String
+Dim st As Integer
+    If Index = -1 Then Exit Sub
+        With mnuItem
+            .Path = ""
+            .Caption = List1.List(Index)
+            .Tool = Text2.Text
+            .Tag = Text3.Text
+            .BStyle = Check7.Value
+            .bkcol = txtBackcolor.Text
+            .frCol = txtForeColor.Text
+            .Group = Text5.Text
+            .Gradiant = txtGradiant.Text
+            Set .Icon = picImg.Image
+            Set .Font = Text4.Font
+                If Combo1.Text <> "(NONE)" Then
+                    .sCut = Combo1.Text
+                Else
+                    .sCut = vbNullString
+                End If
+                If Check1.Value = 1 Then
+                    .Check = True
+                Else
+                    .Check = False
+                End If
+                If Check2.Value = 1 Then
+                    .Enabled = True
+                Else
+                    .Enabled = False
+                End If
+                If Check3.Value = 1 Then
+                    .Visible = True
+                Else
+                    .Visible = False
+                End If
+                If Check4.Value = 1 Then
+                    .Border = True
+                Else
+                    .Border = False
+                End If
+
+                If Check5.Value = 1 Then
+                    .ispop = True
+                Else
+                    .ispop = False
+                End If
+
+                If Check6.Value = 1 Then
+                    .Drop = True
+                Else
+                    .Drop = False
+                End If
+
+                If Option2(0).Value = True Then
+                    .Style = -1
+                ElseIf Option2(1).Value = True Then
+                    .Style = 0
+                ElseIf Option2(2).Value = True Then
+                    .Style = 1
+                End If
+    End With
+    MB.SetItemInfo Index, mnuItem
+End Sub
+
+Private Sub Combo1_Change() 'short cut
+    Changed = True
+End Sub
+
+Private Sub Command2_Click(Index As Integer) 'choose colors and font
+Dim myfont As Font
+Set myfont = MenuItem1.Font
+Changed = True
+CD.hOwner = PropertyPage.hWnd
+    If Index = 0 Then CD.Color = txtBackcolor.BackColor: CD.flags = cdlCCFullOpen: CD.ShowColor: txtBackcolor.Text = CD.Color: txtBackcolor.BackColor = CD.Color: txtForeColor.BackColor = CD.Color: If Not sync.Value = 1 Or List1.ListIndex = 0 Then MenuItem1.BackColor = CD.Color
+    If Index = 1 Then CD.Color = txtForeColor.ForeColor: CD.flags = cdlCCFullOpen: CD.ShowColor: txtForeColor.Text = CD.Color: txtBackcolor.ForeColor = CD.Color: txtGradiant.ForeColor = CD.Color: txtForeColor.ForeColor = CD.Color: If Not sync.Value = 1 Or List1.ListIndex = 0 Then MenuItem1.ForeColor = CD.Color
+    If Index = 3 Then CD.Color = txtGradiant.BackColor: CD.flags = cdlCCFullOpen: CD.ShowColor: txtGradiant.Text = CD.Color: txtGradiant.BackColor = CD.Color: If Not sync.Value = 1 Or List1.ListIndex = 0 Then MenuItem1.Gradiant = CD.Color
+    If Index = 4 Then CD.Color = Text6.BackColor: CD.flags = cdlCCFullOpen: CD.ShowColor: Text6.Text = CD.Color: Text6.BackColor = CD.Color: Picture1.BackColor = CD.Color
+    If Index = 2 Then
+       'set the dialog to match the current item selected
+        CD.FontName = myfont.Name
+        CD.FontBold = myfont.Bold
+        CD.FontItalic = myfont.Italic
+        CD.FontSize = myfont.Size
+        CD.FontStrikeThru = myfont.Strikethrough
+        CD.FontUnderline = myfont.Underline
+        CD.Color = MenuItem1.ForeColor
+        'show the dialog
+        CD.flags = cdlCFBoth
+        CD.ShowFont
+        'set the dialogs properties back to myfont
+        myfont.Bold = CD.FontBold
+        myfont.Name = CD.FontName
+        myfont.Italic = CD.FontItalic
+        myfont.Size = CD.FontSize
+        myfont.Strikethrough = CD.FontStrikeThru
+        myfont.Underline = CD.FontUnderline
+        
+        Text4.Text = CD.FontName
+        Text4.FontName = CD.FontName
+        Text4.FontBold = CD.FontBold
+        Text4.FontItalic = CD.FontItalic
+        Text4.FontSize = CD.FontSize
+        Text4.FontStrikeThru = CD.FontStrikeThru
+        Text4.FontUnderline = CD.FontUnderline
+        'if the color changed set the color of the item
+            If CD.Color <> MenuItem1.ForeColor Then
+                txtForeColor.Text = CD.Color
+            End If
+        Set MenuItem1.Font = myfont
+    End If
+Set myfont = Nothing
+End Sub
+
+Private Sub Command3_Click() 'move to next item
+    SaveProper List1.ListIndex
+        If Not List1.ListIndex = List1.ListCount - 1 Then
+            List1.Selected(List1.ListIndex + 1) = True
+        Else
+            MB.AddItem "", ""
+            List1.AddItem ""
+            List1.Selected(List1.ListCount - 1) = True
+        End If
+    LoadProper List1.ListIndex
+    LstIndex = List1.ListIndex
+    Text1.SetFocus
+End Sub
+
+Private Sub Command4_Click() 'insert
+    SaveProper List1.ListIndex
+        If List1.ListCount = 0 Then
+            MB.DimToCount 0, False
+            MB.AddItem "", ""
+            List1.AddItem ""
+            List1.Selected(0) = True
+        ElseIf List1.ListCount = 1 And List1.List(0) = "" Then
+            MB.DimToCount 0, False
+            MB.AddItem "", ""
+            List1.Selected(0) = True
+        Else
+            Call List1.AddItem("", List1.ListIndex)
+            List1.Selected(List1.ListIndex - 1) = True
+            MB.InsertItem List1.ListIndex
+        End If
+    LoadProper List1.ListIndex
+    Text1.SetFocus
+End Sub
+
+Private Sub Command5_Click() 'Delete
+On Error Resume Next
+Dim itm As Long
+itm = List1.ListIndex
+    MB.removeItem List1.ListIndex
+    Call List1.removeItem(List1.ListIndex)
+        If itm = List1.ListCount And Not List1.ListCount = 0 Then
+            List1.Selected(itm - 1) = True
+        Else
+            If Not itm = 0 Then List1.Selected(itm) = True
+        End If
+    Text1.SetFocus
+End Sub
+
+Private Sub Label1_Click(Index As Integer)
+Dim data As String
+    Select Case Index
+        Case 0 'left
+            If Left(List1.List(List1.ListIndex), 4) = "...." Then
+                List1.List(List1.ListIndex) = Right(List1.List(List1.ListIndex), Len(List1.List(List1.ListIndex)) - 4)
+                prefix = Right(prefix, Len(prefix) - 4)
+            End If
+        Case 1 'right
+            If List1.ListCount > 0 Then
+                List1.List(List1.ListIndex) = "...." & List1.List(List1.ListIndex)
+                prefix = prefix & "...."
+            End If
+        Case 2 'up
+            If List1.ListIndex > 0 Then 'if not the first item
+                MB.UpItem List1.ListIndex 'move item in the array
+                data = List1.List(List1.ListIndex)
+                List1.List(List1.ListIndex) = List1.List(List1.ListIndex - 1)
+                List1.List(List1.ListIndex - 1) = data
+                LoadProper List1.ListIndex
+                List1.Selected(List1.ListIndex - 1) = True
+            End If
+        Case 3 'down
+            If List1.ListIndex < List1.ListCount Then 'if not the last item
+                MB.DnItem List1.ListIndex 'MOVE THE ITEM IN THE MENU ARRAY
+                data = List1.List(List1.ListIndex)
+                List1.List(List1.ListIndex) = List1.List(List1.ListIndex + 1)
+                List1.List(List1.ListIndex + 1) = data
+                LoadProper List1.ListIndex
+                List1.Selected(List1.ListIndex + 1) = True
+            End If
+    End Select
+End Sub
+
+Private Sub List1_Click()
+        If List1.ListIndex <> LstIndex And Not List1.ListCount <= LstIndex Then SaveProper LstIndex
+    LstIndex = List1.ListIndex
+    LoadProper List1.ListIndex
+    VS.Max = List1.ListCount
+    VS.Value = List1.ListIndex
+End Sub
+
+Private Sub MenuItem1_Change()
+    MenuItem1.Width = 100
+End Sub
+
+Private Sub Option1_Click(Index As Integer)
+    BodOpt = Index
+    Changed = True
+End Sub
+
+Private Sub Option2_Click(Index As Integer)
+    Changed = True
+End Sub
+
+Private Sub PropertyPage_ApplyChanges()
+SaveProper List1.ListIndex
+Dim a As Long
+'Dim data As String
+        If Check8.Value = 1 Then
+            If Check9.Value = 1 Then
+                SelectedControls(0).GradientDirection = 1
+            Else
+                SelectedControls(0).GradientDirection = 0
+            End If
+        Else
+            If Check9.Value = 1 Then
+                SelectedControls(0).GradientDirection = 3
+            Else
+                SelectedControls(0).GradientDirection = 2
+            End If
+        End If
+    SelectedControls(0).BotBorder = (chkBotBorder.Value = vbChecked)
+    SelectedControls(0).RightBorder = (chkRightBorder.Value = vbChecked)
+    SelectedControls(0).LeftBorder = (chkLeftBorder.Value = vbChecked)
+    SelectedControls(0).TopBorder = (chkTopBorder.Value = vbChecked)
+    SelectedControls(0).Border = (chkBorder.Value = vbChecked)
+    SelectedControls(0).Enabled = (chkEnabled.Value = vbChecked)
+    SelectedControls(0).Clear
+    SelectedControls(0).BackColor = Text6.Text
+    SelectedControls(0).BorderStyle = BodOpt
+    SelectedControls(0).retainApp = (sync.Value = vbChecked)
+        For a = 0 To List1.ListCount - 1
+            If List1.List(a) = "" Then List1.removeItem (a) 'remove any blank items
+        Next a
+            If List1.ListCount = 0 Then
+                MB.DimToCount 0
+                SelectedControls(0).TotalItems = 0
+            Else
+                MB.DimToCount List1.ListCount - 1
+                SelectedControls(0).TotalItems = List1.ListCount
+            End If
+        If List1.ListCount = 0 Then
+            SelectedControls(0).ActiveControl.Visible = False
+            Exit Sub
+        End If
+        For a = 0 To List1.ListCount - 1
+            If Not Left(List1.List(a), 1) = "." Then
+                mnuItem = MB.GetItemInfo(CInt(a))
+                With mnuItem
+                    If a = 0 Then
+                        'load the properties of the first menu item directly
+                        With SelectedControls(0).ActiveControl     '.MenuItem1(0)
+                           .BackColor = mnuItem.bkcol
+                           .Border = mnuItem.Border
+                           .Caption = mnuItem.Caption
+                           .Checked = mnuItem.Check
+                           Set .Font = mnuItem.Font
+                           .Dropdown = mnuItem.Drop
+                           .Enabled = mnuItem.Enabled
+                           .ForeColor = mnuItem.frCol
+                           Set .picture = mnuItem.Icon
+                           .IsPopup = mnuItem.ispop
+                           .ShortCut = mnuItem.sCut
+                           .Tag = mnuItem.Tag
+                           .ToolTipText = mnuItem.Tool
+                           .Visible = mnuItem.Visible
+                           .Gradiant = mnuItem.Gradiant
+                           .BStyle = mnuItem.BStyle
+                        End With
+                    Else
+                        MB.Add , , .Caption, .Check, .Drop, .ispop, .Tag, .bkcol, .frCol, .Font, .Border, .Icon, .Visible, .Enabled, .sCut, .Group, .Style, .Gradiant, .BStyle, .Tool
+                    End If
+                End With
+            End If
+        Next a
+End Sub
+
+Private Sub PropertyPage_Initialize()
+PropertyPage.Caption = "MenuBar Properties"
+Set CD = New Cdlg
+    With Combo1
+        .AddItem "(NONE)"
+        .AddItem "Ctrl + A"
+        .AddItem "Ctrl + B"
+        .AddItem "Ctrl + C"
+        .AddItem "Ctrl + D"
+        .AddItem "Ctrl + E"
+        .AddItem "Ctrl + F"
+        .AddItem "Ctrl + G"
+        .AddItem "Ctrl + H"
+        .AddItem "Ctrl + I"
+        .AddItem "Ctrl + J"
+        .AddItem "Ctrl + K"
+        .AddItem "Ctrl + L"
+        .AddItem "Ctrl + M"
+        .AddItem "Ctrl + N"
+        .AddItem "Ctrl + O"
+        .AddItem "Ctrl + P"
+        .AddItem "Ctrl + Q"
+        .AddItem "Ctrl + R"
+        .AddItem "Ctrl + S"
+        .AddItem "Ctrl + T"
+        .AddItem "Ctrl + U"
+        .AddItem "Ctrl + V"
+        .AddItem "Ctrl + W"
+        .AddItem "Ctrl + X"
+        .AddItem "Ctrl + Y"
+        .AddItem "Ctrl + Z"
+        .AddItem "F1"
+        .AddItem "F2"
+        .AddItem "F3"
+        .AddItem "F4"
+        .AddItem "F5"
+        .AddItem "F6"
+        .AddItem "F7"
+        .AddItem "F8"
+        .AddItem "F9"
+        .AddItem "F10"
+        .AddItem "F11"
+        .AddItem "F12"
+        .AddItem "F13"
+        .AddItem "F14"
+        .AddItem "F15"
+        .AddItem "F16"
+    End With
+End Sub
+
+Private Sub PropertyPage_SelectionChanged()
+Dim data As String
+Dim parts() As String
+Dim a As Long
+Set MB = SelectedControls(0)
+        If SelectedControls(0).GradientDirection = 3 Then
+            Check8.Value = 0
+            Check9.Value = 1
+        ElseIf SelectedControls(0).GradientDirection = 2 Then
+            Check8.Value = 0
+            Check9.Value = 0
+        ElseIf SelectedControls(0).GradientDirection = 1 Then
+            Check8.Value = 1
+            Check9.Value = 1
+        ElseIf SelectedControls(0).GradientDirection = 0 Then
+            Check8.Value = 1
+            Check9.Value = 0
+        End If
+    chkBotBorder.Value = (SelectedControls(0).BotBorder And vbChecked)
+    chkRightBorder.Value = (SelectedControls(0).RightBorder And vbChecked)
+    chkLeftBorder.Value = (SelectedControls(0).LeftBorder And vbChecked)
+    chkTopBorder.Value = (SelectedControls(0).TopBorder And vbChecked)
+    chkBorder.Value = (SelectedControls(0).Border And vbChecked)
+    chkEnabled.Value = (SelectedControls(0).Enabled And vbChecked)
+    Option1(SelectedControls(0).BorderStyle).Value = True
+    Text6.BackColor = SelectedControls(0).BackColor
+    Picture1.BackColor = Text6.BackColor
+    Text6.Text = Text6.BackColor
+    sync.Value = (SelectedControls(0).retainApp And vbChecked)
+    List1.Clear
+    VS.Max = MB.TotalItems
+    
+        For a = 0 To MB.TotalItems
+            mnuItem = MB.GetItemInfo(CInt(a))
+            List1.AddItem mnuItem.Caption
+        Next a
+    If MB.TotalItems = 0 Then
+        MB.AddItem "", ""
+        MB.TotalItems = 1
+    End If
+    List1.Selected(0) = True
+    'LoadProper 0
+End Sub
+
+Private Sub PropertyPage_Terminate()
+    Set MB = Nothing
+    Set CD = Nothing
+End Sub
+
+Private Sub sync_Click()
+    Changed = True
+    SaveProper List1.ListIndex
+    LoadProper List1.ListIndex
+End Sub
+
+Private Sub Text1_Change()
+    Changed = True 'change the list items text to reflect the caption change
+    If Not List1.ListCount = 0 Then List1.List(List1.ListIndex) = prefix & Text1.Text
+        If Text1.Text = "-" Then
+            Seperator1.Visible = True
+            MenuItem1.Visible = False
+        Else
+            Seperator1.Visible = False
+            MenuItem1.Visible = True
+            MenuItem1.Caption = Text1.Text
+        End If
+End Sub
+
+Private Sub Text2_Change()
+Changed = True
+    If Seperator1.Visible = True Then Seperator1.Caption = Text2.Text
+End Sub
+
+Private Sub Text3_Change()
+Changed = True
+End Sub
+
+Private Sub Text5_Change()
+Changed = True
+End Sub
+
+Private Sub Text6_Change()
+    Changed = True
+End Sub
+
+Private Sub txtBackcolor_Change()
+On Error GoTo outs
+    txtBackcolor.BackColor = txtBackcolor.Text
+    txtForeColor.BackColor = txtBackcolor.Text
+        If Not sync.Value = 1 Or List1.ListIndex = 0 Then MenuItem1.BackColor = txtBackcolor.Text
+    Changed = True
+outs:
+End Sub
+
+Private Sub txtForeColor_Change()
+On Error GoTo outs
+    txtBackcolor.ForeColor = txtForeColor.Text
+    txtGradiant.ForeColor = txtForeColor.Text
+    txtForeColor.ForeColor = txtForeColor.Text
+       If Not sync.Value = 1 Or List1.ListIndex = 0 Then MenuItem1.ForeColor = txtForeColor.Text
+    Changed = True
+outs:
+End Sub
+
+Private Sub txtGradiant_Change()
+On Error GoTo outs
+    txtGradiant.BackColor = txtGradiant.Text
+        If Not sync.Value = 1 Or List1.ListIndex = 0 Then MenuItem1.Gradiant = txtGradiant.Text
+    Changed = True
+outs:
+End Sub
+
+Private Sub VS_Change()
+        If VS.Value = VS.Max Then 'if we are at the last item
+            Command3_Click 'add another
+        End If
+    List1.Selected(VS.Value) = True 'select the next/prev item
+End Sub
+
+Private Sub VS_GotFocus()
+    Text1.SetFocus
+End Sub
